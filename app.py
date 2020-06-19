@@ -52,17 +52,27 @@ app.layout = html.Div([
     [dcc.Tab(label='Home', value='tab-0', style=tab_style, selected_style=tab_selected_style, children=[
             html.P(""),
             html.H3("SentimentZION "),
-            html.Div([html.H4("Know what the world thinks!"),
-                    html.P("We at SentimentZION are focused to paint the true picture of the world for you. The information that is provided is mined from social media and analyzed by us, we provided an overview of data from websites like Youtube, Twitter, and Reddit about your topic for a relevant timeframe. This data is presented in a visual format that provides higher readability and ease of consumption."),
-                    html.H4("So what am I seeing?"),
-                    html.P("-- Youtube : 100 most relevant comments each from across 10 most popular videos, "),
-                    html.P("for instance, 100x10=1000 comments !"),
-                    html.P("-- Twitter: around 1000 most relevant tweets!"),
-                    html.P("-- Reddit : 150 most relevant comments each from across 5 most active subreddits,  "),
-                    html.P("for instance, 150x5=750 comments !"),
+            html.Div(
+                [html.H4("Be a part of the change !!!"),
+                    html.P("We at SentimentZION are focused to paint the true picture of the world for you. The information that is provided is mined from social media and analysed by us, we provided an overview of data from websites like YouTube, Twitter, and Reddit about your topic for a relevant timeframe."),
+                    html.H4("DIVERSIFY!!!"),
+                    html.P("Rightly said , Diversity is the inclusion of all individuals as technology and that is where our website focuses on!!! "),
+                    html.H4("CREATING AWARENESS!!!"),
+                    html.P("Awareness is the first step towards creating a better society and community as increasing the use of technology increases the dangers related to it."),
+                    html.H3("FAQ "),
+                    html.H4("What am I seeing?"),
+                    html.P("Graphs which depict the analysis of the sentiments of the people."),
+                    html.H4("What is the source of the data collection?"),
+                    html.P("These data are collected from the comments of the social media sites like YouTube, Twitter and Reddit."),
+                    html.H4("How is the data analyzed?"),
+                    html.P("The most important part of our website is the analysis of the data. The comments that are retrieved are analysed through a sentimental analysis model which rates the comments from a scale of -1 to 1. -1 being most negative, 0 being neutral and 1 being most positive."),
+                    html.H4("How far is the data correct?"),
+                    html.P("The data is as efficient as it could be. The comments are analysed through textblob Natural Language Processing(NLP). So the output is quite efficient."),
                     html.H4("What is the significance?"),
-                    html.P("Most social networks project the views of the most vocal but a minority of users on their platforms, however, the majority of the users' opinion is not taken into consideration. We plan on providing a non-biased overview by mining each comment from various social media sites which returns a score on a scale of -1 to 1, which signifies the sentiments of people where '-1' being most negative sentiment i.e. people are unsatisfied with it and '+1' being most positive sentiment i.e. people are satisfied."),
-                    html.P("Note: This data is changing every second and hence the results take time to analyze and convert this data into a consumable format so a little Patience will be appreciated")
+                    html.P("Most social networks project the views of the most vocal but a minority of users on their platforms, however, the majority of the users' opinion is not taken into consideration. That is where our website effects the most."),
+                    html.H4("The comments are updating! Are the graphs getting updated?"),
+                    html.P("Yes, the graphs are live visual representation of the comments. As the comments get updated, the graphs too get updated.")
+
                     ])
 
         ]),
