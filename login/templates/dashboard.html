@@ -7,14 +7,14 @@
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="/public/app.css" rel="stylesheet">
     </head>
-    <body class="home">
+    <body class="home" style="background-color: #282828">
         <div class="container">
             <div class="login-page clearfix">
                 <div class="logged-in-box auth0-box logged-in">
                     <h1 id="logo"><img src="https://analysezionapp.herokuapp.com/assets/img/circlelogo.png", style="height:200px;width:200px" /></h1>
                     <img class="avatar" src="{{userinfo['picture']}}"/>
-                    <h2>Welcome {{userinfo['name']}}</h2>
-                    
+                    <h2 style="color: #ffffff">Welcome {{userinfo['name']}}</h2>
+
                     <a id="dash" class="btn btn-primary btn-lg btn-logout btn-block" href="http://localhost:8050/">Dashboard</a>
                     <a id="qsLogoutBtn" class="btn btn-primary btn-lg btn-logout btn-block" href="/logout">Logout</a>
                 </div>
