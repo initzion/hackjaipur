@@ -16,7 +16,7 @@ html_layout = '''<!DOCTYPE html>
             <li><a href="/" style = "position:absolute; left:50px; top:0px;" >SentimentZION</a></li></b>
             <ul class="container">
 <c>
-
+      <li><a href="http://localhost:3000/dashboard">Log Out</a></li>
       <li><a href="https://initzion.github.io/" , target="_blank">About Us</a></li>
 </c>
             </ul>

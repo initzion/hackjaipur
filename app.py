@@ -76,7 +76,7 @@ app.layout = html.Div([
                     ])
 
         ]),
-        dcc.Tab(label='YouTube', value='tab-1', style=tab_style, selected_style=tab_selected_style, children=[
+        dcc.Tab(label='Dashboard', value='tab-1', style=tab_style, selected_style=tab_selected_style, children=[
             html.Div([
                 #html.Div(html.H1(children="Team Zion")),
                 html.P(""),
@@ -110,77 +110,6 @@ app.layout = html.Div([
 
             ])
         ]),
-        dcc.Tab(label='Twitter', value='tab-2', style=tab_style, selected_style=tab_selected_style, children=[
-            html.Div([
-                #html.Div(html.H1(children="Team Zion")),
-                html.P(""),
-                html.H3("Enter the term you want to analyse"),
-                html.Div([
-                    dcc.Input(
-                        id = "tquery-input",
-                        placeholder = "Enter the query you want to search",
-                        type = "text",
-                        value = "Covid19",
-                        style={"margin-right": "15px"}
-                    ),
-
-                   html.Button('Submit', id='tsubmit-val', n_clicks=0),
-                   html.H5("*This module is under construction, sorry for the inconvenience",style = {"color": "#ff0000"}),
-                ]),
-                html.Div(
-                    dcc.Graph(id="t-graph1",)
-                    ),
-                html.P(""),
-                html.Div(
-                    dcc.Graph(id="t-graph2",)
-                    ),
-                html.P(""),
-                html.Div(
-                    dcc.Graph(id="t-graph3",)
-                    ),
-                html.P(""),
-                html.Div(
-                    dcc.Graph(id="t-graph4",)
-                    )
-
-            ])
-        ]),
-
-        dcc.Tab(label='Reddit', value='tab-3', style=tab_style, selected_style=tab_selected_style, children=[
-            html.Div([
-                #html.Div(html.H1(children="Team Zion")),
-                html.P(""),
-                html.H3("Enter the term you want to analyse"),
-                html.Div([
-                    dcc.Input(
-                        id = "rquery-input",
-                        placeholder = "Enter the query you want to search",
-                        type = "text",
-                        value = "Covid19",
-                        style={"margin-right": "15px"}
-                    ),
-
-                   html.Button('Submit', id='rsubmit-val', n_clicks=0),
-                   html.P(""),
-                ]),
-                html.Div(
-                    dcc.Graph(id="r-graph1"),
-                    ),
-                html.P(""),
-                html.Div(
-                    dcc.Graph(id="r-graph2",)
-                    ),
-                html.P(""),
-                html.Div(
-                    dcc.Graph(id="r-graph3",)
-                    ),
-                html.P(""),
-                html.Div(
-                    dcc.Graph(id="r-graph4",)
-                    )
-
-            ])
-        ]),
     ])
 ])
 
@@ -200,41 +129,6 @@ def update_figyt(n_clicks,input_value):
     figure2 = figure[1]
     figure3 = figure[2]
     figure4 = figure[3]
-
-    return figure1, figure2, figure3, figure4
-
-@app.callback(
-    [dash.dependencies.Output("t-graph1","figure"),
-    dash.dependencies.Output("t-graph2","figure"),
-    dash.dependencies.Output("t-graph3","figure"),
-    dash.dependencies.Output("t-graph4","figure")],
-    [dash.dependencies.Input('tsubmit-val', 'n_clicks')],
-    [dash.dependencies.State("tquery-input","value")])
-def update_figtwt(n_clicks,input_value):
-    figure = TWT_graph(n_clicks,input_value)
-    figure1 = figure[0]
-    figure2 = figure[1]
-    figure3 = figure[2]
-    figure4 = figure[3]
-
-    return figure1, figure2, figure3, figure4
-
-
-@app.callback(
-    [dash.dependencies.Output("r-graph1","figure"),
-    dash.dependencies.Output("r-graph2","figure"),
-    dash.dependencies.Output("r-graph3","figure"),
-    dash.dependencies.Output("r-graph4","figure")],
-    [dash.dependencies.Input('rsubmit-val', 'n_clicks')],
-    [dash.dependencies.State("rquery-input","value")])
-def update_figreddit(n_clicks,input_value):
-    figure = REDDIT_graph(n_clicks,input_value)
-    figure1 = figure[0]
-    figure2 = figure[1]
-    figure3 = figure[2]
-    figure4 = figure[3]
-
-
 
     return figure1, figure2, figure3, figure4
 
