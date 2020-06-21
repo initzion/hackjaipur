@@ -16,6 +16,27 @@ This data is presented in a visual format that provides higher readability and e
 ![SentimentZION Thumbnail](https://github.com/initzion/hackjaipur/blob/master/assets/img/thumbnailhj.jpg)
  https://www.youtube.com/watch?v=PdQlbfJ3SBY&feature=youtu.be
  
+## Rightly said, Diversity is the inclusion of all individuals as technology and that is where our website focuses on!!!
+
+## What am I seeing?
+Graphs that depict the analysis of the sentiments of the people.
+
+## What is the source of the data collection?
+These data are collected from the comments of social media sites like YouTube, Twitter, and Reddit.
+
+## How is the data analyzed?
+The most important part of our website is the analysis of the data. The comments that are retrieved are analyzed through a sentimental analysis model which rates the comments from a scale of -1 to 1. -1 being most negative, 0 being neutral and 1 being most positive.
+
+## How far is the data correct?
+The data is as efficient as it could be. The comments are analyzed through text blob Natural Language Processing(NLP). So the output is quite efficient.
+
+## What is the significance?
+Most social networks project the views of the most vocal but a minority of users on their platforms, however, the majority of the users' opinion is not taken into consideration. That is where our website effects the most.
+
+## The comments are updating! Are the graphs getting updated?
+Yes, the graphs are the live visual representation of the comments. As the comments get updated, the graphs to get updated.
+Sentiment Analysis
+ 
  ## :pencil: Note
  Edit 2 files "youtube.py" , "senti.py" and "Reddit.py"
  Enter your own api-key if you dont have one visit:
